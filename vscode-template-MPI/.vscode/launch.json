@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "mpicc - Build and debug active file",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${fileDirname}/${fileBasenameNoExtension}", // "/Users/msain1995/opt/usr/local/bin/mpirun",//
+        "args": [
+            "-np",
+            "4",
+            "${fileDirname}/${fileBasenameNoExtension}"
+        ],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment":[{ "name": "TMPDIR", "value": "/tmp" }],
+        "externalConsole": false,
+        "MIMode": "lldb",
+        "preLaunchTask": "mpicc build active file"
+      }
+    ]
+  }
+
